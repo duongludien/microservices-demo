@@ -1,0 +1,8 @@
+﻿<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="My Budgets" type="CompoundRunConfigurationType">
+    <toRun name="BalanceService.Api" type="LaunchSettings" />
+    <toRun name="BudgetService.Api" type="LaunchSettings" />
+    <toRun name="WalletService.Api" type="LaunchSettings" />
+    <method v="2" />
+  </configuration>
+</component>

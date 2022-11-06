@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcWallet";
+
+package WalletServiceApi;
+
+service Wallet {
+  rpc GetAllWallets(GetAllWalletsRequest) returns (GetAllWalletsResponse) {}
+}
+
+message GetAllWalletsRequest {
+  
+}
+
+message GetAllWalletsResponse {
+  repeated WalletItemResponse items = 1; 
+}
+
+message WalletItemResponse {
+  int32 id = 1;
+  string name = 2;
+}

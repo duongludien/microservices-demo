@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package GrpcBalance; 
+
+service BalanceService {
+  rpc CreateForBudget(CreateBalanceForBudgetRequest) returns (CreateBalanceForBudgetResponse) {}
+}
+
+message CreateBalanceForBudgetRequest {
+  int32 budgetId = 1;
+}
+
+message CreateBalanceForBudgetResponse {
+  repeated BalanceItem items = 1;
+}
+
+message BalanceItem {
+  int32 id = 1;
+  int32 budgetId = 2;
+  int32 walletId = 3;
+  int64 amount = 4;
+}
